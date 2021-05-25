@@ -1,6 +1,6 @@
 # OttoCat Machine Learning
 
-Nuestra version del famoso open source robot con una epica personalidad con nuestro toque gatuno, listo para ayudar a desarrollar las habildades del futuro como Machine Learning e Internet de las Cosas
+Nuestra version del famoso robot open source "OTTO" con una epica personalidad, ahora con nuestro toque gatuno, OttoCat esta listo para ayudar a desarrollar las habildades del futuro como Machine Learning e Internet de las Cosas.
 
 ## Features:
  - Vision: Ahora Otto realmente puede ver gracias a una camara
