@@ -3,8 +3,8 @@
 Nuestra version del famoso robot open source "OTTO" con una epica personalidad, ahora con nuestro toque gatuno, OttoCat esta listo para ayudar a desarrollar las habildades del futuro como Machine Learning e Internet de las Cosas.
 
 ## Features:
- - Vision: Ahora Otto realmente puede ver gracias a una camara
- - IA: Gracias a la Nano BLE Sense y EdgeImpulse hemos brindado de "inteligencia artificial" al pequeño Otto
+ - Vision: Ahora Otto realmente puede ver gracias a una camara y Teachable
+ - IA: Gracias a la Nano BLE Sense, Teachable y EdgeImpulse hemos brindado de "inteligencia artificial" al pequeño Otto
  - BLE: Comunicacion Bluetooth
  - Sensores: Ahora tiene una serie de sensores como acelerometros
  
