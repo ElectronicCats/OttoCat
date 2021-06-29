@@ -1,4 +1,24 @@
-/* Copyright 2019 The TensorFlow Authors. All Rights Reserved.
+/* 
+  OttoCat
+  Andres Sabas @ Electronic Cats
+
+  Original Creation Date: Jun 28, 2021
+  https://github.com/ElectronicCats/OttoCat
+  
+  This example demonstrates how to use OttoCat
+  
+  Development environment specifics:
+  IDE: Arduino 1.8.13
+
+
+  This code is beerware; if you see me (or any other Electronic Cats
+  member) at the local, and you've found our code helpful,
+  please buy us a round!
+  Distributed as-is; no warranty is given.
+
+  Based on code of TensorFlow
+  
+  Copyright 2019 The TensorFlow Authors. All Rights Reserved.
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -12,6 +32,7 @@
   See the License for the specific language governing permissions and
   limitations under the License.
   ==============================================================================*/
+
 #include <TensorFlowLite.h>
 #include "mbed.h"
 #include "main_functions.h"
@@ -104,6 +125,7 @@ void setup() {
 
   // Get information about the memory area to use for the model's input.
   input = interpreter->input(0);
+  
   pinMode(LED_BUILTIN, OUTPUT);
   digitalWrite(LED_BUILTIN, LOW);
   servo1.attach(11);  // attaches the servo on pin 11 to the servo object
@@ -131,20 +153,20 @@ void loop() {
     for (int i = 0; i < kCategoryCount; i++) {
       int8_t curr_category_score = output->data.uint8[i];
       const char* currCategory = kCategoryLabels[i];
-      //TF_LITE_REPORT_ERROR(error_reporter, "%s : %d", currCategory, curr_category_score);
+      TF_LITE_REPORT_ERROR(error_reporter, "%s : %d", currCategory, curr_category_score);
     }
     int8_t class1_score = output->data.uint8[0];
     int8_t class2_score = output->data.uint8[1];
 
     if (class1_score > class2_score) {
-      Serial.println("Es ElectronicCats");
+      Serial.println("Object 1");
       digitalWrite(LED_BUILTIN, HIGH);
       servo1.write(90);                  // sets the servo position according to the scaled value
       servo2.write(90);                  // sets the servo position according to the scaled value
       delay(15); 
     }
     if (class1_score < class2_score) {
-      Serial.println("Es Sabas");
+      Serial.println("Object 2");
       digitalWrite(LED_BUILTIN, LOW);
       servo1.write(180);                  // sets the servo position according to the scaled value
       servo2.write(180);                  // sets the servo position according to the scaled value
