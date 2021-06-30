@@ -128,8 +128,11 @@ void setup() {
   
   pinMode(LED_BUILTIN, OUTPUT);
   digitalWrite(LED_BUILTIN, LOW);
-  servo1.attach(11);  // attaches the servo on pin 11 to the servo object
-  servo2.attach(12);  // attaches the servo on pin 12 to the servo object
+  servo1.attach(A6);  // attaches the servo on pin A6 to the servo object
+  servo2.attach(A7);  // attaches the servo on pin A7 to the servo object
+  servo1.write(90);                  // sets the servo position according to the scaled value
+  servo2.write(90);                  // sets the servo position according to the scaled value
+  delay(200); 
 }
 
 void loop() {
